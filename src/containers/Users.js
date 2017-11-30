@@ -104,7 +104,8 @@ class Users extends Component {
                         return loadMoreEntries(
                           this.state.first,
                           this.state.skip,
-                          this.filter.value
+                          this.filterKey.value,
+                          this.filterValue.value
                         );
                       }}
                     />
