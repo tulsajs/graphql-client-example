@@ -140,6 +140,8 @@ export default graphql(getPosts, {
             }
             return fetchMoreResult;
           }
+        }).catch(e => {
+          alert(e);
         });
       }
     };

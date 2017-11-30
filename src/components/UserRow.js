@@ -21,6 +21,8 @@ class UserRow extends Component {
         this.setState({ editing: false });
         refetch();
       }
+    }).catch(e => {
+      alert(e);
     });
   };
 
@@ -32,6 +34,8 @@ class UserRow extends Component {
         this.setState({ editing: false });
         refetch();
       }
+    }).catch(e => {
+      alert(e);
     });
   };
 

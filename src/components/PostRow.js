@@ -16,6 +16,8 @@ class PostRow extends Component {
         this.setState({ editing: false });
         refetch();
       }
+    }).catch(e => {
+      alert(e);
     });
   };
 
@@ -27,6 +29,8 @@ class PostRow extends Component {
         this.setState({ editing: false });
         refetch();
       }
+    }).catch(e => {
+      alert(e);
     });
   };
 
@@ -37,6 +41,8 @@ class PostRow extends Component {
       update: (proxy, { data: { upvotePost } }) => {
         refetch();
       }
+    }).catch(e => {
+      alert(e);
     });
   };
 
