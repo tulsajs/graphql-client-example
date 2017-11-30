@@ -25,7 +25,7 @@ class Posts extends Component {
     }
     history.push(`/posts?skip=${skip}`);
     this.setState({ skip: skip });
-    this.props.loadMoreEntries(this.state.first, skip);
+    this.props.loadMoreEntries(this.state.first, skip, this.filter.value);
   };
 
   filterList = () => {
