@@ -4,7 +4,7 @@ import { graphql } from 'react-apollo';
 import gql from 'graphql-tag';
 import PostRow from '../components/PostRow';
 import { skipParam, history } from '../history';
-
+import Loading from '../components/Loading';
 class Posts extends Component {
   state = {
     first: 20,
@@ -36,15 +36,7 @@ class Posts extends Component {
   render() {
     const { posts, postsLength, loadMoreEntries, loading } = this.props;
     if (loading) {
-      return (
-        <Grid>
-          <Row>
-            <Col xs={12}>
-              <div>Loading...</div>
-            </Col>
-          </Row>
-        </Grid>
-      );
+      return <Loading />;
     }
 
     return (

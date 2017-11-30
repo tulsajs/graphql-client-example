@@ -24,6 +24,7 @@ class PostRow extends Component {
     deletePost({
       variables: { id: post.id },
       update: (proxy, { data: { deletePost } }) => {
+        this.setState({ editing: false });
         refetch();
       }
     });
