@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Route, Link } from 'react-router-dom';
 import Users from './containers/Users';
 import Posts from './containers/Posts';
@@ -8,7 +8,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 export default class Routes extends Component {
   render() {
     return (
-      <div>
+      <Fragment>
         <Navbar>
           <Navbar.Header>
             <Navbar.Brand>
@@ -27,7 +27,7 @@ export default class Routes extends Component {
         <Route exact path="/" component={Users} />
         <Route path="/users" component={Users} />
         <Route path="/posts" component={Posts} />
-      </div>
+      </Fragment>
     );
   }
 }
